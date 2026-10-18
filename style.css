@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef1f4;
+  color: #222;
+}
+
+header {
+  background: #2a6f97;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+}
+
+header p {
+  margin: 0;
+}
+
+main {
+  max-width: 700px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #555;
+}
+
+/* ----- Form (Flexbox) ----- */
+#note-form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#note-form input {
+  flex: 1;
+}
+
+input,
+select {
+  padding: 0.5rem;
+  font: inherit;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+#search-input {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font: inherit;
+  color: #fff;
+  background: #2a6f97;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4f6e;
+}
+
+#error-message {
+  color: #c00000;
+  min-height: 1.2em;
+  margin: 0.75rem 0 0;
+}
+
+/* ----- Notes list ----- */
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.note {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-left: 6px solid #999;
+  border-radius: 6px;
+}
+
+.note p {
+  margin: 0 0 0.5rem;
+}
+
+.note-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.note-category {
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: #c00000;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.delete-btn:hover {
+  background: #8f0000;
+}
+
+#clear-all {
+  background: #666;
+}
+
+#clear-all:hover {
+  background: #444;
+}
+
+/* ----- Category styles ----- */
+.category-personal {
+  border-left-color: teal;
+}
+
+.category-work {
+  border-left-color: darkred;
+}
+
+.category-study {
+  border-left-color: royalblue;
+}
+
+.empty-message {
+  color: #555;
+  font-style: italic;
+}
+
+/* ----- Small screens ----- */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
