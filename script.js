@@ -127,3 +127,18 @@ form.addEventListener("submit", function (event) {
   noteInput.value = "";
   render();
 });
+
+// ----------  search as you type ----------
+searchInput.addEventListener("input", render);
+
+// ----------  clear all ----------
+clearAllBtn.addEventListener("click", function () {
+  if (notes.length === 0) {
+    return;
+  }
+  if (confirm("Delete all notes?")) {
+    notes = [];
+    saveNotes();
+    render();
+  }
+});
