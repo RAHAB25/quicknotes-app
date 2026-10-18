@@ -89,3 +89,41 @@ function render() {
 
   updateCount();
 }
+
+// ----------  delete ----------
+function deleteNote(id) {
+  notes = notes.filter(function (note) {
+    return note.id !== id;
+  });
+  saveNotes();
+  render();
+}
+// ----------  add a note with validation ----------
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const text = noteInput.value.trim();
+
+  if (text === "") {
+    errorMessage.textContent = "Please type a note first.";
+    return;
+  }
+  if (text.length > MAX_CHARS) {
+    errorMessage.textContent = "Notes must be 200 characters or fewer.";
+    return;
+  }
+
+  errorMessage.textContent = "";
+
+  const note = {
+    id: Date.now(),
+    text: text,
+    category: categorySelect.value,
+    createdAt: new Date().toLocaleString()
+  };
+
+  notes.push(note);
+  saveNotes();
+  noteInput.value = "";
+  render();
+});
