@@ -18,6 +18,6 @@ QuickNotes is a small note-taking web app built with HTML, CSS and JavaScript. Y
 3. Double-click `index.html` to open it in your browser (or use Live Server in VS Code).
 
 ## What I learned
-- (Write one point about something you learned, e.g. how localStorage works)
-- (Write a second point, e.g. how render() rebuilds the list from an array)
-- (Write a third point, e.g. what you learned about Git or fixing errors)
+- I learned how the local storage works
+- how render() rebuilds the list from an array.
+- how to make a website functional.
